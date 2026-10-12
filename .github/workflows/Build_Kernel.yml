@@ -242,6 +242,12 @@ jobs:
           # 开启一些附加优化配置
           echo "🔧 Applying basic optimized configurations... (应用基本优化配置)"
           scripts/config --file out/.config \
+            -e CGROUP_DEVICE \
+            -e FHANDLE \
+            -e IPC_NS \
+            -e PID_NS \
+            -e DM_THIN_PROVISIONING \
+            
             -e KALLSYMS \
             -e KALLSYMS_ALL \
             -e KPROBES \
